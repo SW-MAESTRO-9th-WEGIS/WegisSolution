@@ -123,7 +123,7 @@ public:
     device_info_t getDeviceInfo() override {
         auto device_info = DefaultDeviceInfoProvider::getDeviceInfo();
         // Set the storage size to 256mb
-        device_info.storageInfo.storageSize = 512 * 1024 * 1024;
+        device_info.storageInfo.storageSize = 64 * 1024 * 1024;
         return device_info;
     }
 };
