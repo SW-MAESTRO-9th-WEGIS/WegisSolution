@@ -22,7 +22,7 @@ Implement live streaming using video.js
 <br /> 
 
 ***
-### WegisHardwareWegisServer
+### WegisHardware
 ***
 
 
