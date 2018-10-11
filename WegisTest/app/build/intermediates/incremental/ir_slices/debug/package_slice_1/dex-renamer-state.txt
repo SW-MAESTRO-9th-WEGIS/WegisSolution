@@ -1,0 +1,4 @@
+#Thu Sep 27 18:27:30 KST 2018
+base.0=/Users/bitna/AndroidStudioProjects/WegisTest/app/build/intermediates/transforms/dexMerger/debug/1
+path.0=classes.dex
+renamed.0=classes.dex
