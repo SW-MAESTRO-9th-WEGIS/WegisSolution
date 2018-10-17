@@ -1,11 +1,18 @@
 import RPi.GPIO as GPIO
 import time
 
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(21,GPIO.IN)
+GPIO.setmode(GPIO.BOARD)
+GPIO.setup(40,GPIO.IN)
 
 while True:
-    input_state = GPIO.input(21)
+    input_state = GPIO.input(40)
     if input_state == True:
 	print("Motion Detected")
-	time.sleep(2)
+	time.sleep(1)
+
+    else:
+	print("not detected")
+	time.sleep(1)
+
+
+#after detect 10s -> none
