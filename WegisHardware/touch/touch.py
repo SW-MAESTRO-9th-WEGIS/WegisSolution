@@ -20,8 +20,10 @@ mpr121.setup(0x5b)
 # Track touches
 
 touches = [0,0,0,0,0,0,0,0,0,0,0,0];
+pass_pwd = [1,2,3,4];
 pwd = [0,0,0,0];
 j = 0
+key = 0
 
 while True:
 
@@ -40,9 +42,20 @@ while True:
 			time.sleep(0.3)
 			touches[i] = 1;
 			pwd[j] = (i+1)
+
+			if pass_pwd[j] == pwd[j]:
+			    key = key + 1
+
 			j=j+1
+
 			if j==4 :
 			    j=0
+			    if key == 4:
+				print "-------motor O"
+				key = 0
+			    else:
+				print "-------motor X"
+				key = 0
 
 	    else:
 		if (touches[i] == 1):
@@ -50,3 +63,4 @@ while True:
 			time.sleep(0.3)
 			touches[i] = 0;
 			print pwd
+			print key
