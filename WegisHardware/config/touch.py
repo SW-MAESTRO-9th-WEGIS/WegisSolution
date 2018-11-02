@@ -4,6 +4,7 @@ import RPi.GPIO as GPIO
 import mpr121
 import time
 import subprocess
+import config
 
 # Use GPIO Interrupt Pin
 
@@ -28,7 +29,6 @@ key = 0 # strlen(pwd) => door open
 fail_work = 0
 
 while True:
-
     if (GPIO.input(7)): # Interupt pin is high
 	pass
     else: # Interupt pin is low
@@ -58,8 +58,9 @@ while True:
 			    else:
 				print "-------motor X"
 				key = 0
-				fail_work = fail_work + 1
-				fail_call = "php putdata.php 2 "+"time "+str(fail_work)
+				config.fail_work = config.fail_work + 1
+				fail_call = "php putdata.php 2 "+"time " + str(config.fail_work)
+				return config.fail_work
 				print fail_call
 
 	    else:
