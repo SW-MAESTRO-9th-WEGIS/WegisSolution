@@ -4,7 +4,6 @@ import RPi.GPIO as GPIO
 import mpr121
 import time
 import subprocess
-import config
 
 # Use GPIO Interrupt Pin
 
@@ -58,9 +57,9 @@ while True:
 			    else:
 				print "-------motor X"
 				key = 0
-				config.fail_work = config.fail_work + 1
-				fail_call = "php putdata.php 2 "+"time " + str(config.fail_work)
-				return config.fail_work
+				fail_work = fail_work + 1
+				fail_call = "php putdata.php 2 "+"time " + str(fail_work)
+
 				print fail_call
 
 	    else:

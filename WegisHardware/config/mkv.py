@@ -1,7 +1,7 @@
 import time
 import picamera
 import subprocess
-import config #user edit
+ #user edit
 
 now = time.localtime()
 s = "%04d_%02d_%02d_%02d:%02d:%02d"%(now.tm_year, now.tm_mon, now.tm_mday, now.tm_hour, now.tm_min, now.tm_sec)
@@ -40,6 +40,7 @@ while(1):
 	    subprocess.call(call, shell=True)
 	    subprocess.call("rm 1.h264 ",shell=True)
 	    print "success mk mp4 " + str(count) + " sec file"
+	    print touch.fail_work
 	    call2 = "php putdata.php 2 " + s + " 00:00:10 " + str(config.fail_work)
 	    print call2
 	    break;
