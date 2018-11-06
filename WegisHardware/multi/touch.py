@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 def touch():
+    from multiprocessing import Process, Queue
     import RPi.GPIO as GPIO
     import mpr121
     import time
@@ -61,7 +62,7 @@ def touch():
                                     fail_work = fail_work + 1
                                     fail_call = "php putdata.php 2 "+"time " + str(fail_work) 
                                     print fail_call
-
+				    print "fail : " + str(fail_work)
                 else:
                     if (touches[i] == 1):
                             print( 'Pin ' + str(i+1) + ' was just released')
@@ -69,9 +70,8 @@ def touch():
                             touches[i] = 0;
                             print pwd
                             print key
-			    if fail_work == 1:
-				return fail_work
-				quit()
-			    else:
-				pass;
+			    #if fail_work == 1:
+				#return fail_work
+			    #else:
+				#pass;
 
