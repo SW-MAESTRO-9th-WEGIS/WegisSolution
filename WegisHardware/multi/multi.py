@@ -2,13 +2,11 @@ from multiprocessing import Process, Queue
 
 import time
 import touch
-import mkv
 import RPi.GPIO as GPIO
 import time
-import defprt
 import picamera
 import subprocess
-
+import os
 
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(40,GPIO.IN)
@@ -38,7 +36,7 @@ count = 0 # delete
 
 camera = picamera.PiCamera() # camera init
 
-
+p3.start()
 
 while True:
     #q = Queue()
@@ -47,9 +45,12 @@ while True:
 	if check_time == 0:
 	    now = time.localtime()
 	    times = "%04d_%02d_%02d_%02d:%02d:%02d" % (now.tm_year, now.tm_mon, now.tm_mday, now.tm_hour, now.tm_min, now.tm_sec)
+	    t = open("time.txt", 'w')
+	    t.write(times)
+	    t.close()
 #	    print time
 	    check_time = 1
-	    p3.start()
+	    #p3.start()
 	    #print q.get()
 	#print("Motion Detected")
 	#time.sleep(1)
@@ -71,6 +72,8 @@ while True:
 	    call = "MP4Box -add "+"1.h264 "+ name
 	    print call
 	    subprocess.call(call, shell=True)
+	    s = os.environ.get('kkk')
+	    print s
 	    subprocess.call("rm 1.h264 ", shell=True)
 	    print "success to make mp4 file"
 	    #p3.exit()

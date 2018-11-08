@@ -5,7 +5,7 @@ def touch():
     import mpr121
     import time
     import subprocess
-
+    import os
     global fail_work
 # Use GPIO Interrupt Pin
 
@@ -63,6 +63,13 @@ def touch():
                                     fail_call = "php putdata.php 2 "+"time " + str(fail_work) 
                                     print fail_call
 				    print "fail : " + str(fail_work)
+				    t = open("time.txt",'r')
+				    while True:
+					line = t.readline()
+					if not line:
+					    break
+					print(line)
+				    t.close()
                 else:
                     if (touches[i] == 1):
                             print( 'Pin ' + str(i+1) + ' was just released')
