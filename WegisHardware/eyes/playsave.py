@@ -13,8 +13,8 @@ import subprocess
 # " sudo python3 mogmog.py "
 
 cap = cv2.VideoCapture(0)
-codec = cv2.VideoWriter_fourcc(*'H264')
-out = cv2.VideoWriter('test.mp4', codec, 20.0, (640,480))
+#codec = cv2.VideoWriter_fourcc(*'X264')
+out = cv2.VideoWriter('test.mp4', 0x00000021, 20.0, (320,240))
 
 #cap = cv2.resize(capp, None, fx=0.5, fy=0.5, interpolation=cv2.INTER_AREA)
 kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(3,3))
@@ -32,7 +32,7 @@ i = 0
 
 while(1):
     ret, frame = cap.read()
-    out.write(frame)
+    #out.write(frame)
 
     count = cap.get(cv2.CAP_PROP_POS_FRAMES)
     #left = 'left.png'
@@ -49,8 +49,9 @@ while(1):
     #warning = 'warning.png'
     #warning = cv2.imread(warning, cv2.IMREAD_GRAYSCALE)
    # mid = cv2.resize(mid, (100,80))
-    if int(count)%5 == 0:
+    if int(count)%1 == 0:
         frame = cv2.resize(frame, (320, 240))
+	out.write(frame)
 ##
 #        kernel = np.ones((2,2), np.float32)/4 # / k*2
 #        frame = cv2.filter2D(frame, -1, kernel)
@@ -149,4 +150,5 @@ while(1):
     else:
         pass
 cap.release()
+out.release()
 cv2.destroyAllWindows()
