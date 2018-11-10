@@ -24,7 +24,7 @@ switch ($check) {
         break;
     case 2:
         // 파일 업로드
-        //ftp_upload($file_path,$argv[2]); 
+        ftp_upload($file_path,$argv[2]); 
          
         // 비디오 데이터 전달    
         $data = array(
@@ -51,7 +51,7 @@ function ftp_upload($file_path,$file_name){
     $ftp_id = "pi";    
     $ftp_pw = "raspberry";  
     $ftp_port = "21";           
-    $server_path = "./Videos/"; 
+    $server_path = "/home/pi/Videos/"; 
 
     if(!($fc = ftp_connect($ftp_host, $ftp_port))) die("$ftp_host : $ftp_port - 연결에 실패");   
     if(!ftp_login($fc, $ftp_id, $ftp_pw)) die("$ftp_id - 로그인에 실패하였습니다.");   
