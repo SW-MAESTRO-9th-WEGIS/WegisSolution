@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity"
+    android:background="@drawable/concept_bg"
+    android:theme="@style/AppTheme">
+
+    <ImageView
+        android:layout_width="152dp"
+        android:layout_height="58dp"
+        android:background="@drawable/ic_logo_alter"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.03"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="#ffffff"
+        android:text="보안 작동 중\n    level 5"
+        app:layout_constraintBottom_toBottomOf="@id/mainOval"
+        app:layout_constraintLeft_toLeftOf="@id/mainOval"
+        app:layout_constraintRight_toRightOf="@id/mainOval"
+        app:layout_constraintTop_toTopOf="@id/mainOval"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.7"
+        />
+
+
+
+    <View  tools:layout_editor_absoluteY="112dp"
+        android:id="@+id/mainOval"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:background="@drawable/status_gradient"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.16"
+        app:layout_constraintHorizontal_bias="0.45"
+        />
+
+    <View  tools:layout_editor_absoluteY="112dp"
+
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:background="@drawable/pic_security_level"
+        app:layout_constraintLeft_toLeftOf="@+id/mainOval"
+        app:layout_constraintRight_toRightOf="@+id/mainOval"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintBottom_toBottomOf="@+id/mainOval"
+        app:layout_constraintTop_toTopOf="@+id/mainOval"
+        app:layout_constraintVertical_bias="0.4"
+        />
+
+
+    <Button
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="@drawable/pic_security_privacy"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+android:id="@+id/safebtn"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        app:layout_constraintHorizontal_bias="0.73"
+        android:background="@drawable/pic_security_home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        android:id="@+id/guardbtn"
+        tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:id="@+id/privaTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textColor="#4e86de"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.22"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.58"
+        android:text="프라이버시 모드\nON" />
+
+    <TextView
+        android:id="@+id/saferTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:letterSpacing="-0.05"
+        android:lineSpacingExtra="6sp"
+        android:textColor="#9b9b9b"
+        android:textSize="14sp"
+        tools:ignore="MissingConstraints"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.58"
+        android:text="안심귀가 지키미\nOff" />
+
+
+    <View
+        android:id="@+id/lv"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:background="@drawable/shadow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.98"
+        tools:ignore="MissingConstraints" />
+
+    <ListView
+        android:id="@+id/listV1"
+        android:layout_width="280dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="@+id/lv"
+        app:layout_constraintLeft_toLeftOf="@+id/lv"
+        app:layout_constraintRight_toRightOf="@+id/lv"
+        app:layout_constraintVertical_bias="0.8">
+    </ListView>
+
+
+    <!--////////하단 탭/////-->
+        <View
+            android:layout_width="400dp"
+            android:layout_height="56dp"
+            android:background="#ffffff"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="452dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:ignore="MissingConstraints"
+            android:id="@+id/tab"/>
+
+    <Button
+        android:layout_width="56dp"
+        android:layout_height="50dp"
+        android:id="@+id/tabBtn1"
+        android:background="@drawable/tab_on_1_alter"
+        app:layout_constraintLeft_toLeftOf="@id/tab"
+        app:layout_constraintRight_toRightOf="@id/tab"
+        app:layout_constraintBottom_toBottomOf="@id/tab"
+        app:layout_constraintTop_toTopOf="@id/tab"
+        app:layout_constraintHorizontal_bias="0.08"
+        />
+
+        <Button
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:id="@+id/tabBtn2"
+            android:background="@drawable/tab_off_2"
+            app:layout_constraintLeft_toLeftOf="@id/tab"
+            app:layout_constraintRight_toRightOf="@id/tab"
+            app:layout_constraintBottom_toBottomOf="@id/tab"
+            app:layout_constraintTop_toTopOf="@id/tab"
+
+            app:layout_constraintHorizontal_bias="0.35"
+            />
+
+
+        <Button
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:id="@+id/tabBtn3"
+            android:background="@drawable/tab_off_3"
+            app:layout_constraintLeft_toLeftOf="@id/tab"
+            app:layout_constraintRight_toRightOf="@id/tab"
+            app:layout_constraintBottom_toBottomOf="@id/tab"
+            app:layout_constraintTop_toTopOf="@id/tab"
+
+            app:layout_constraintHorizontal_bias="0.62"
+            />
+
+
+        <Button
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:id="@+id/tabBtn4"
+            android:background="@drawable/tab_off_4"
+            app:layout_constraintLeft_toLeftOf="@id/tab"
+            app:layout_constraintRight_toRightOf="@id/tab"
+            app:layout_constraintBottom_toBottomOf="@id/tab"
+            app:layout_constraintTop_toTopOf="@id/tab"
+            app:layout_constraintHorizontal_bias="0.88"
+            />
+    </android.support.constraint.ConstraintLayout>

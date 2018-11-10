@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WebviewActivity"
+    android:background="@drawable/concept_bg">
+
+
+    <WebView
+        android:layout_width="400dp"
+        android:layout_height="300dp"
+        android:id="@+id/webV"/>
+
+
+    <View
+        tools:layout_editor_absoluteY="112dp"
+        android:id="@+id/view"
+        android:layout_width="95dp"
+        android:layout_height="130dp"
+        android:background="@drawable/shadow"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.65"
+        app:layout_constraintHorizontal_bias="0.12"
+        />
+
+
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:background="@drawable/oval"
+        app:layout_constraintBottom_toBottomOf="@id/view"
+        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintLeft_toLeftOf="@id/view"
+        app:layout_constraintRight_toRightOf="@id/view"
+        app:layout_constraintTop_toTopOf="@id/view"
+        app:layout_constraintVertical_bias="0.308"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/home"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/ic_realtime_open"
+        app:layout_constraintBottom_toBottomOf="@id/view1"
+        app:layout_constraintLeft_toLeftOf="@id/view1"
+        app:layout_constraintRight_toRightOf="@id/view1"
+        app:layout_constraintTop_toTopOf="@id/view1"
+        tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="#202649"
+        android:letterSpacing="-0.05"
+        android:gravity="center_horizontal"
+        android:text="문 열기"
+        app:layout_constraintBottom_toBottomOf="@id/view"
+        app:layout_constraintLeft_toLeftOf="@id/view"
+        app:layout_constraintRight_toRightOf="@id/view"
+        app:layout_constraintTop_toTopOf="@id/view"
+        app:layout_constraintVertical_bias="0.85"
+
+        />
+
+
+
+    <View
+        tools:layout_editor_absoluteY="112dp"
+        android:id="@+id/view2"
+        android:layout_width="95dp"
+        android:layout_height="130dp"
+        android:background="@drawable/shadow"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.65"
+        app:layout_constraintHorizontal_bias="0.53"
+        />
+
+
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:background="@drawable/oval"
+        app:layout_constraintBottom_toBottomOf="@id/view2"
+        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintLeft_toLeftOf="@id/view2"
+        app:layout_constraintRight_toRightOf="@id/view2"
+        app:layout_constraintTop_toTopOf="@id/view2"
+        app:layout_constraintVertical_bias="0.308"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/ic_realtime_cancel"
+        app:layout_constraintBottom_toBottomOf="@id/view3"
+        app:layout_constraintLeft_toLeftOf="@id/view3"
+        app:layout_constraintRight_toRightOf="@id/view3"
+        app:layout_constraintTop_toTopOf="@id/view3"
+        tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="#202649"
+        android:letterSpacing="-0.05"
+        android:gravity="center_horizontal"
+        android:text="무효화"
+        app:layout_constraintBottom_toBottomOf="@id/view2"
+        app:layout_constraintLeft_toLeftOf="@id/view2"
+        app:layout_constraintRight_toRightOf="@id/view2"
+        app:layout_constraintTop_toTopOf="@id/view2"
+        app:layout_constraintVertical_bias="0.85"
+
+        />
+
+
+
+    <View
+        tools:layout_editor_absoluteY="112dp"
+        android:id="@+id/view4"
+        android:layout_width="95dp"
+        android:layout_height="130dp"
+        android:background="@drawable/shadow"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.65"
+        app:layout_constraintHorizontal_bias="0.93"
+        />
+
+
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:background="@drawable/oval"
+        app:layout_constraintBottom_toBottomOf="@id/view4"
+        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintLeft_toLeftOf="@id/view4"
+        app:layout_constraintRight_toRightOf="@id/view4"
+        app:layout_constraintTop_toTopOf="@id/view4"
+        app:layout_constraintVertical_bias="0.308"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/ic_realtime_speak"
+        app:layout_constraintBottom_toBottomOf="@id/view5"
+        app:layout_constraintLeft_toLeftOf="@id/view5"
+        app:layout_constraintRight_toRightOf="@id/view5"
+        app:layout_constraintTop_toTopOf="@id/view5"
+        tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="#202649"
+        android:letterSpacing="-0.05"
+        android:gravity="center_horizontal"
+        android:text="누구세요?\n
+말하기"
+        app:layout_constraintBottom_toBottomOf="@id/view4"
+        app:layout_constraintLeft_toLeftOf="@id/view4"
+        app:layout_constraintRight_toRightOf="@id/view4"
+        app:layout_constraintTop_toTopOf="@id/view4"
+        app:layout_constraintVertical_bias="0.88"
+
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:id="@+id/tv2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.85"
+        />
+
+
+    <View
+        android:layout_width="400dp"
+        android:layout_height="56dp"
+        android:background="#ffffff"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="452dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints"
+        android:id="@+id/tab"/>
+
+
+    <Button
+        android:layout_width="56dp"
+        android:layout_height="50dp"
+        android:id="@+id/tabBtn1"
+        android:background="@drawable/tab_off_1"
+        app:layout_constraintLeft_toLeftOf="@id/tab"
+        app:layout_constraintRight_toRightOf="@id/tab"
+        app:layout_constraintBottom_toBottomOf="@id/tab"
+        app:layout_constraintTop_toTopOf="@id/tab"
+
+        app:layout_constraintHorizontal_bias="0.08"
+        />
+
+    <Button
+        android:layout_width="56dp"
+        android:layout_height="50dp"
+        android:id="@+id/tabBtn2"
+        android:background="@drawable/tab_off_2"
+        app:layout_constraintLeft_toLeftOf="@id/tab"
+        app:layout_constraintRight_toRightOf="@id/tab"
+        app:layout_constraintBottom_toBottomOf="@id/tab"
+        app:layout_constraintTop_toTopOf="@id/tab"
+
+        app:layout_constraintHorizontal_bias="0.35"
+        />
+
+
+    <Button
+        android:layout_width="56dp"
+        android:layout_height="50dp"
+        android:id="@+id/tabBtn3"
+        android:background="@drawable/tab_on_3_alter"
+        app:layout_constraintLeft_toLeftOf="@id/tab"
+        app:layout_constraintRight_toRightOf="@id/tab"
+        app:layout_constraintBottom_toBottomOf="@id/tab"
+        app:layout_constraintTop_toTopOf="@id/tab"
+
+        app:layout_constraintHorizontal_bias="0.62"
+        />
+
+
+    <Button
+        android:layout_width="56dp"
+        android:layout_height="50dp"
+        android:id="@+id/tabBtn4"
+        android:background="@drawable/tab_off_4"
+        app:layout_constraintLeft_toLeftOf="@id/tab"
+        app:layout_constraintRight_toRightOf="@id/tab"
+        app:layout_constraintBottom_toBottomOf="@id/tab"
+        app:layout_constraintTop_toTopOf="@id/tab"
+        app:layout_constraintHorizontal_bias="0.88"
+        />
+
+
+
+
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EventDetailActivity"
+    android:background="#f9faff">
+
+
+    <VideoView
+        android:layout_width="400dp"
+        android:layout_height="300dp"
+        android:id="@+id/videoV"/>
+
+
+    <View
+
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="@drawable/ic_piechart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.22"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        tools:ignore="MissingConstraints" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="#202649"
+        android:letterSpacing="-0.05"
+        android:text="위험도 분석 결과"
+        app:layout_constraintHorizontal_bias="0.45"
+       app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+
+        />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#202649"
+        android:letterSpacing="-0.05"
+        android:text="시간"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.58"
+
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#202649"
+        android:letterSpacing="-0.05"
+        android:text="hour:sec"
+        app:layout_constraintHorizontal_bias="0.58"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.58"
+        android:id="@+id/tvTime"
+
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#202649"
+        android:letterSpacing="-0.05"
+        android:text="감지 행동"
+        app:layout_constraintHorizontal_bias="0.27"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.64"
+
+
+        />
+
+
+    <TextView
+        android:id="@+id/tvDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#202649"
+        android:letterSpacing="-0.05"
+        android:text="null"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.64"
+
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#202649"
+        android:letterSpacing="-0.05"
+        android:text="감지된 사람"
+        app:layout_constraintHorizontal_bias="0.28"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.7"
+
+
+        />
+
+
+    <TextView
+        android:id="@+id/tvDesc2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#202649"
+        android:letterSpacing="-0.05"
+        android:text="null"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.7"
+
+        />
+
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="44dp"
+        android:background="@drawable/rectangle2"
+       android:text="위험도 판단"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintVertical_bias="0.82"
+        />
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="44dp"
+        android:background="@drawable/rectangle2"
+        android:text="영상저장"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.82"
+        />
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="44dp"
+        android:background="@drawable/rectangle2"
+        android:text="리포트 공유"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintVertical_bias="0.82"
+        />
+
+
+
+
+
+    <View
+        android:layout_width="400dp"
+        android:layout_height="56dp"
+        android:background="#ffffff"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="452dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints"
+        android:id="@+id/tab"/>
+
+
+    <Button
+        android:layout_width="56dp"
+        android:layout_height="50dp"
+        android:id="@+id/tabBtn1"
+        android:background="@drawable/tab_off_1"
+        app:layout_constraintLeft_toLeftOf="@id/tab"
+        app:layout_constraintRight_toRightOf="@id/tab"
+        app:layout_constraintBottom_toBottomOf="@id/tab"
+        app:layout_constraintTop_toTopOf="@id/tab"
+
+        app:layout_constraintHorizontal_bias="0.08"
+        />
+
+    <Button
+        android:layout_width="56dp"
+        android:layout_height="50dp"
+        android:id="@+id/tabBtn2"
+        android:background="@drawable/tab_off_2"
+        app:layout_constraintLeft_toLeftOf="@id/tab"
+        app:layout_constraintRight_toRightOf="@id/tab"
+        app:layout_constraintBottom_toBottomOf="@id/tab"
+        app:layout_constraintTop_toTopOf="@id/tab"
+
+        app:layout_constraintHorizontal_bias="0.35"
+        />
+
+
+    <Button
+        android:layout_width="56dp"
+        android:layout_height="50dp"
+        android:id="@+id/tabBtn3"
+        android:background="@drawable/tab_on_3_alter"
+        app:layout_constraintLeft_toLeftOf="@id/tab"
+        app:layout_constraintRight_toRightOf="@id/tab"
+        app:layout_constraintBottom_toBottomOf="@id/tab"
+        app:layout_constraintTop_toTopOf="@id/tab"
+
+        app:layout_constraintHorizontal_bias="0.62"
+        />
+
+
+    <Button
+        android:layout_width="56dp"
+        android:layout_height="50dp"
+        android:id="@+id/tabBtn4"
+        android:background="@drawable/tab_off_4"
+        app:layout_constraintLeft_toLeftOf="@id/tab"
+        app:layout_constraintRight_toRightOf="@id/tab"
+        app:layout_constraintBottom_toBottomOf="@id/tab"
+        app:layout_constraintTop_toTopOf="@id/tab"
+        app:layout_constraintHorizontal_bias="0.88"
+        />
+
+
+
+
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>
