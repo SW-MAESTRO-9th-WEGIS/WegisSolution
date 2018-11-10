@@ -77,6 +77,7 @@ while True:
 	    print call
 	    print php_call
 	    subprocess.call(call, shell=True)
+	    subprocess.call(php_call, shell=True)
 	    subprocess.call("rm 1.h264 ", shell=True)
 	    print "success to make mp4 file"
 	    #p3.exit()
