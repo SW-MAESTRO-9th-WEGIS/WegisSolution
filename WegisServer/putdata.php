@@ -1,5 +1,6 @@
 <?php
 $url = "http://192.168.201.1/connection/getdata.php";
+//$url = "http://192.168.201.1/connection/eect.php";
 $file_path = "./";
 /* checking input data option : argv[1]
 0 : IP
@@ -18,7 +19,7 @@ switch ($check) {
     case 1:
         $data = array(
             'check' => $argv[1],
-            'duringtime' => $argv[2],
+            'TIME' => $argv[2],
             'keypad' => $argv[3],
         ); 
         break;
@@ -30,8 +31,8 @@ switch ($check) {
         $data = array(
             'check' => $argv[1],
             'file_name' => $argv[2],
-            'duringTime' => $argv[3],
-            'keypad' => $argv[4]
+            'date_time' => $argv[3],
+            'duringTime' => $argv[4]
            );
         break;
 }
