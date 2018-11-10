@@ -42,24 +42,22 @@ while True:
     #q = Queue()
     input_state = GPIO.input(40)
     if input_state == True:
+	count += 1
+	time.sleep(1)
 	if check_time == 0:
 	    now = time.localtime()
-	    times = "%04d_%02d_%02d_%02d:%02d:%02d" % (now.tm_year, now.tm_mon, now.tm_mday, now.tm_hour, now.tm_min, now.tm_sec)
+	    times = "%04d-%02d-%02d_%02d:%02d:%02d" % (now.tm_year, now.tm_mon, now.tm_mday, now.tm_hour, now.tm_min, now.tm_sec)
 	    t = open("time.txt", 'w')
 	    t.write(times)
 	    t.close()
 #	    print time
 	    check_time = 1
-	    #p3.start()
-	    #print q.get()
-	#print("Motion Detected")
-	#time.sleep(1)
 
 	if start_cam == 0:
 	    start_cam = 1
 	    print "detect human & start record "
 	    name = times + ".mp4"
-	    count += 1 # delete
+	    count = 1 # delete
 	    camera.start_recording("1.h264") # make name
     else:
 	#print("Detecting ... ...")
@@ -70,10 +68,16 @@ while True:
 	    camera.stop_recording()
 	    print " stop record "
 	    call = "MP4Box -add "+"1.h264 "+ name
+	    d_sec = "%02d" % (count%60)
+	    d_min = "%02d" % (count/60)
+	    dd_min = (count/60)
+	    d_hour = "%02d" % (dd_min/60)
+	    during = str(d_hour)+":"+str(d_min)+":"+str(d_sec)
+	    php_call = "php putdata.php 2 "+ name + " " + times + " " + str(during)
 	    print call
+	    print php_call
 	    subprocess.call(call, shell=True)
-	    s = os.environ.get('kkk')
-	    print s
+	    subprocess.call(php_call, shell=True)
 	    subprocess.call("rm 1.h264 ", shell=True)
 	    print "success to make mp4 file"
 	    #p3.exit()

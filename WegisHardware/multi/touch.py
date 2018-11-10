@@ -60,15 +60,17 @@ def touch():
                                     print "-------motor X"
                                     key = 0
                                     fail_work = fail_work + 1
-                                    fail_call = "php putdata.php 2 "+"time " + str(fail_work) 
-                                    print fail_call
-				    print "fail : " + str(fail_work)
+                                    #fail_call = "php putdata.php 2 "+"time " + str(fail_work) 
+                                    #print fail_call
+				    #print "fail : " + str(fail_work)
 				    t = open("time.txt",'r')
 				    while True:
 					line = t.readline()
 					if not line:
 					    break
-					print(line)
+					fail_call = "php putdata.php 1 " + line + " " + str(fail_work)
+					subprocess.call(fail_call, shell=True)
+					print fail_call
 				    t.close()
                 else:
                     if (touches[i] == 1):
