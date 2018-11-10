@@ -1,6 +1,5 @@
 <?php
 $url = "http://192.168.201.1/connection/getdata.php";
-//$url = "http://192.168.201.1/connection/eect.php";
 $file_path = "./";
 /* checking input data option : argv[1]
 0 : IP
@@ -48,9 +47,9 @@ curl_close($ch);
 
 
 function ftp_upload($file_path,$file_name){
-    $ftp_host = "http://192.168.201.1/";
+    $ftp_host = "192.168.201.1";
     $ftp_id = "pi";    
-    $ftp_pw = "raspberry";  
+    $ftp_pw = "";  
     $ftp_port = "21";           
     $server_path = "/home/pi/Videos/"; 
 
