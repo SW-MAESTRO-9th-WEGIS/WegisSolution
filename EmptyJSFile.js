@@ -15,7 +15,7 @@ var serverKey = '';
 // 안드로이드 App이 적절한 구현절차를 통해서 생성해야 하는 값이다.
 // 안드로이드 단말에서 Node server로 POST방식 전송 후,
 // Node서버는 이 값을 DB에 보관하고 있으면 된다.
-var client_token = 'cN9JAA3mQ-Q:APA91bGigAF19cCDIxPjWQtOCTyVNYYgpiPNQTEJ_V9CSko9AXXOPWaH2LNwJWVoYKf5aAdvzC_n8RXiv6wAVKcd-ddF57SkDTj6arxpYU6YTx9iKnRM0J339O6nuSsmFf_aIoXHIK69';
+var client_token = '';
 
 /** 발송할 Push 메시지 내용 */
 var push_data = {
