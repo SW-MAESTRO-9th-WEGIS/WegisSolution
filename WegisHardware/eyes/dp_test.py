@@ -119,18 +119,21 @@ while(1):
 #		subprocess.call("cat left.txt", shell=True)
 		#show = left
 		#print "left"
+		pygame.display.init()
 		window.blit(left3, (0,0))
 		pygame.display.update()
 	    elif x < 216:
 #		subprocess.call("cat mid.txt", shell=True)
 		#show = mid
 		#print "middle"
+		pygame.display.init()
 		window.blit(mid, (0,0))
 		pygame.display.update()
 	    elif x < 320:
 #		subprocess.call("cat right.txt", shell=True)
 		#show = right
 		#print "right"
+		pygame.display.init()
 		window.blit(right3, (0,0))
 		pygame.display.update
 	else:
