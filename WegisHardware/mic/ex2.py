@@ -1,7 +1,7 @@
 import wave
 import numpy as np
 
-wr = wave.open('ks.wav', 'r')
+wr = wave.open('sj.wav', 'r')
 sz = 44100 # Read and process 1 second at a time.
 da = np.fromstring(wr.readframes(sz), dtype=np.int16)
 left, right = da[0::2], da[1::2]
@@ -25,6 +25,8 @@ b = plt.subplot(212)
 b.set_xlabel('frequency [Hz]')
 b.set_ylabel('|amplitude|')
 plt.plot(lf)
+#plt.xlim(50,10000)
+#plt.ylim(0,20000)
 plt.show()
 #plt.savefig('gunshot.png')
 
