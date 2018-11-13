@@ -6,7 +6,7 @@ import scipy.fftpack
 import numpy as np
 from matplotlib import pyplot as plt
 
-fs_rate, signal = wavfile.read("sbsound.wav")
+fs_rate, signal = wavfile.read("ZZ.wav")
 print ("Frequency sampling", fs_rate)
 #freq sampling = 96000 / 44100 (sz)
 

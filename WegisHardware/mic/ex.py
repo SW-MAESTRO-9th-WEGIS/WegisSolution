@@ -6,7 +6,7 @@ import scipy.fftpack
 import numpy as np
 from matplotlib import pyplot as plt
 
-fs_rate, signal = wavfile.read("sbsound.wav")
+fs_rate, signal = wavfile.read("ks2.wav")
 print ("Frequency sampling", fs_rate)
 l_audio = len(signal.shape)
 print ("Channels", l_audio)
@@ -39,8 +39,8 @@ plt.xlabel('Time')
 plt.ylabel('Amplitude')
 
 plt.subplot(312)
-#p2 = plt.plot(freqs, FFT, "r") # plotting the complete fft spectrum
-p2 = plt.plot(abs(freqs), signal, "r")
+p2 = plt.plot(freqs, FFT, "r") # plotting the complete fft spectrum
+#p2 = plt.plot(abs(freqs), signal, "r")
 plt.xlabel('Frequency (Hz)')
 plt.ylabel('Count dbl-sided')
 
