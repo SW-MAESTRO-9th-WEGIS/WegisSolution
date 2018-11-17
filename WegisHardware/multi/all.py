@@ -3,10 +3,11 @@ from multiprocessing import Process, Queue
 import time
 import touch
 import RPi.GPIO as GPIO
-import eyes
+import time
 import picamera
 import subprocess
 import os
+
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(40,GPIO.IN)
 

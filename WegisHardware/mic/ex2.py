@@ -1,7 +1,7 @@
 import wave
 import numpy as np
 
-wr = wave.open('sj.wav', 'r')
+wr = wave.open('ccc.wav', 'r')
 sz = 44100 # Read and process 1 second at a time.
 da = np.fromstring(wr.readframes(sz), dtype=np.int16)
 left, right = da[0::2], da[1::2]

@@ -31,15 +31,15 @@ runSince = time.strftime("%H:%M:%S")
 
 i = 0
 
-left = '1.bmp'
+left = '../eyes/1.bmp'
 left = cv2.imread(left)
 left = cv2.resize(left, (800,480))
 
-right = '7.bmp'
+right = '../eyes/7.bmp'
 right = cv2.imread(right)
 right = cv2.resize(right, (800,480))
 
-mid = '4.bmp'
+mid = '../eyes/4.bmp'
 mid = cv2.imread(mid)
 mid = cv2.resize(mid, (800,480))
 
