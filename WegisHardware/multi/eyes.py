@@ -119,15 +119,15 @@ def eyes():
             if x < 108:
     #		subprocess.call("cat left.txt", shell=True)
                 show = left
-                print "left"
+#                print "left"
             elif x < 216:
     #		subprocess.call("cat mid.txt", shell=True)
                 show = mid
-                print "middle"
+#                print "middle"
             elif x < 320:
     #		subprocess.call("cat right.txt", shell=True)
                 show = right
-                print "right"
+#                print "right"
         else:
     #	    show = warning
             pass #	    print "Too close ... Warning !!"
